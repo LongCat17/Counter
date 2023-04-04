@@ -13,7 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    var clickCount = 0
+    @IBOutlet var countLabel: UILabel!
+    
+    @IBAction func buttonWasTouched(sender: UIButton) {
+        clickCount += 1
+        countLabel.text = "\(clickCount)"
+    }
 }
-
